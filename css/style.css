@@ -4,12 +4,12 @@ body {
 	font-family: sans-serif;
 	font-weight: 400;
 	font-size: 12pt;
-
-	background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-	color: var(--oc-gray-7);
+	
+	background-color: var(--oc-gray-1);
+	color: var(--oc-grey-9);
 
 	height: 100%;
-	padding: 1%;
+	padding: 7pt;
 	margin: 0px;
 	
 }
@@ -22,16 +22,16 @@ h1 {
 	margin-top: var(--va-distance1);
 	margin-bottom: var(--va-distance0);
 
-	color: var(--oc-gray-0);
+	color: var(--oc-grey-9);
 }
 
 /* paragraph */
 p{
     margin: var(--va-distance1) 0;
-	color: var(--oc-gray-0);
+	color: var(--oc-grey-9);
 }
 a:not(.logo){
-	color: var(--oc-grape-2);
+	color: var(--oc-blue-7);
 	text-decoration: none;
 }
 a:not(.logo):hover {
@@ -39,12 +39,23 @@ a:not(.logo):hover {
 }
 
 /* grid */
-.logos{
-	margin-top: 25pt;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-    grid-gap: 25pt;
-
+@media (max-width: 500px) {
+	.logos{
+		margin-top: 7pt;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+		grid-gap: 7pt;
+	
+	}
+}
+@media (min-width: 500px) {
+	.logos{
+		margin-top: 7pt;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+		grid-gap: 7pt;
+	
+	}
 }
 .logo{
     aspect-ratio: 1/1;
@@ -55,20 +66,17 @@ a:not(.logo):hover {
 	
     backdrop-filter: blur(21px) saturate(82%);
     -webkit-backdrop-filter: blur(21px) saturate(82%);
-    background-color: rgba(255, 255, 255, 0.74);
+    background-color: var(--oc-gray-0);
     border-radius: 12px;
-    border: 1px solid rgba(209, 213, 219, 0.3);
+
+	box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
 
 	transition: all 0.5s ease;
 }
 .logo:hover{
 	transform: scale(1.01);
 
-    backdrop-filter: blur(33px) saturate(50%);
-    -webkit-backdrop-filter: blur(25px) saturate(119%);
-    background-color: rgba(255, 255, 255, 0.75);
-    border-radius: 12px;
-    border: 1px solid rgba(209, 213, 219, 0.3);
+	box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
 }
 .logo img{
 	width: 50%;
